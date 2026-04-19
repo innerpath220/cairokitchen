@@ -7,7 +7,7 @@
     <meta name="description" content="Cairo Kitchen — authentic Egyptian dining in Zamalek &amp; Maadi, Cairo. Koshary, tajens, rotisserie chicken &amp; catering. Order delivery or reserve a table.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cairo-kitchen.com/">
-    <link rel="icon" type="image/jpeg" href="./pics/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="/pics/logo.jpg">
 
     <!-- Open Graph -->
     <meta property="og:type" content="restaurant">
@@ -234,11 +234,6 @@
 
         /* Hero Section */
         .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 8rem 0 4rem; overflow: hidden; }
-        .hero-bg {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: url('./pics/home_made_kosharay.jpg') center/cover no-repeat;
-            z-index: -2; transform: scale(1.05); animation: slowZoom 20s infinite alternate linear;
-        }
         
         /* Carousel hero backgrounds */
         .hero-carousel {
@@ -453,7 +448,7 @@
         .author-info p { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.25rem; }
 
         /* Updated Contact Section & Grids */
-        .contact-section { padding: 8rem 0; position: relative; background: url('./pics/beef.jpg') center/cover scroll; }
+        .contact-section { padding: 8rem 0; position: relative; background: url('/pics/beef.jpg') center/cover scroll; }
         .contact-overlay { position: absolute; inset: 0; background: rgba(7, 7, 9, 0.88); backdrop-filter: blur(5px); }
         .contact-card {
             position: relative; background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
@@ -593,7 +588,6 @@
             .menu-grid { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
             .gallery-item { grid-column: span 1; grid-row: span 1; }
-            .hero-bg { animation: none; }
             .hero-carousel-slide { animation: none !important; }
         }
 
@@ -657,7 +651,7 @@
     <nav>
         <div class="nav-container">
             <a href="#" class="logo-container">
-                <img src="./pics/logo.jpg" alt="Cairo Kitchen restaurant logo">
+                <img src="/pics/logo.jpg" alt="Cairo Kitchen restaurant logo">
                 <span class="logo-text">Cairo Kitchen</span>
             </a>
             
@@ -684,10 +678,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-carousel" id="heroCarousel">
-            <div class="hero-carousel-slide active" style="background-image: url('./pics/home_made_kosharay.jpg');"></div>
-            <div class="hero-carousel-slide" style="background-image: url('./pics/beef.jpg');"></div>
-            <div class="hero-carousel-slide" style="background-image: url('./pics/Authentic Egyptian koshary dish at Cairo Kitchen restaurant.jpg');"></div>
-            <div class="hero-carousel-slide" style="background-image: url('./pics/fattah_chicken.jpg');"></div>
+            <div class="hero-carousel-slide active" style="background-image: url('/pics/home_made_kosharay.jpg');"></div>
+            <div class="hero-carousel-slide" style="background-image: url('/pics/beef.jpg');"></div>
+            <div class="hero-carousel-slide" style="background-image: url('/pics/Authentic Egyptian koshary dish at Cairo Kitchen restaurant.jpg');"></div>
+            <div class="hero-carousel-slide" style="background-image: url('/pics/fattah_chicken.jpg');"></div>
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
@@ -743,11 +737,11 @@
             </div>
             
             <div class="menu-grid">
-                <div class="menu-page reveal-up menu-trigger" data-img="./pics/menu1.jpg">
-                    <img src="./pics/menu1.jpg" alt="Cairo Kitchen food menu — Egyptian dishes, prices and full offerings">
+                <div class="menu-page reveal-up menu-trigger" data-img="/pics/menu1.jpg">
+                    <img src="/pics/menu1.jpg" alt="Cairo Kitchen food menu — Egyptian dishes, prices and full offerings">
                 </div>
-                <div class="menu-page reveal-up menu-trigger" style="transition-delay: 0.2s;" data-img="./pics/menu2.jpg">
-                    <img src="./pics/menu2.jpg" alt="Cairo Kitchen drinks and desserts menu — full selection with prices">
+                <div class="menu-page reveal-up menu-trigger" style="transition-delay: 0.2s;" data-img="/pics/menu2.jpg">
+                    <img src="/pics/menu2.jpg" alt="Cairo Kitchen drinks and desserts menu — full selection with prices">
                 </div>
             </div>
         </div>
@@ -764,16 +758,16 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item reveal-up">
-                    <img src="./pics/beef.jpg" alt="Authentic Egyptian beef at Cairo Kitchen restaurant">
+                    <img src="/pics/beef.jpg" alt="Authentic Egyptian beef at Cairo Kitchen restaurant">
                 </div>
                 <div class="gallery-item reveal-up" style="transition-delay: 0.1s;">
-                    <img src="./pics/Authentic Egyptian koshary dish at Cairo Kitchen restaurant.jpg" alt="Traditional Egyptian food spread — mahashi, salads and appetizers">
+                    <img src="/pics/Authentic Egyptian koshary dish at Cairo Kitchen restaurant.jpg" alt="Traditional Egyptian food spread — mahashi, salads and appetizers">
                 </div>
                 <div class="gallery-item reveal-up" style="transition-delay: 0.2s;">
-                    <img src="./pics/fattah_chicken.jpg" alt="Freshly prepared homemade Egyptian food at Cairo Kitchen Cairo">
+                    <img src="/pics/fattah_chicken.jpg" alt="Freshly prepared homemade Egyptian food at Cairo Kitchen Cairo">
                 </div>
                 <div class="gallery-item reveal-up" style="transition-delay: 0.3s;">
-                    <img src="./pics/home_made_kosharay.jpg" alt="Homemade Egyptian koshary dish at Cairo Kitchen restaurant">
+                    <img src="/pics/home_made_kosharay.jpg" alt="Homemade Egyptian koshary dish at Cairo Kitchen restaurant">
                 </div>
             </div>
         </div>
@@ -881,7 +875,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div style="width: 48px; height: 48px; border-radius: 50%; background: url('./pics/logo.jpg') center/cover; margin: 0 auto 1.5rem; opacity: 0.7; filter: grayscale(100%); transition: all 0.3s ease;"></div>
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: url('/pics/logo.jpg') center/cover; margin: 0 auto 1.5rem; opacity: 0.7; filter: grayscale(100%); transition: all 0.3s ease;"></div>
             
             <p class="footer-tagline">healthy, homemade goodness {that's a promise}</p>
             
@@ -1218,7 +1212,7 @@
   "description": "Authentic Egyptian dining featuring koshary, tajens, rotisserie chicken, mahashi, and catering services in Cairo.",
   "servesCuisine": "Egyptian",
   "url": "https://cairo-kitchen.com",
-  "logo": "./pics/logo.jpg",
+  "logo": "/pics/logo.jpg",
   "sameAs": [
     "https://www.facebook.com/CairoKitchen/"
   ],
