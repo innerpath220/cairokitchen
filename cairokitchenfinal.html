@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cairo Kitchen | Authentic Egyptian Dining in Cairo — Zamalek &amp; Maadi</title>
+    <meta name="description" content="Cairo Kitchen — authentic Egyptian dining in Zamalek &amp; Maadi, Cairo. Koshary, tajens, rotisserie chicken &amp; catering. Order delivery or reserve a table.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cairo-kitchen.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Cairo Kitchen | Authentic Egyptian Dining in Cairo">
+    <meta property="og:description" content="Healthy, homemade Egyptian food in Zamalek &amp; Maadi. Koshary, tajens, rotisserie chicken, catering &amp; delivery.">
+    <meta property="og:image" content="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg">
+    <meta property="og:url" content="https://cairo-kitchen.com/">
+    <meta property="og:locale" content="en_EG">
+    <meta property="og:site_name" content="Cairo Kitchen">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cairo Kitchen | Authentic Egyptian Dining in Cairo">
+    <meta name="twitter:description" content="Healthy, homemade Egyptian food in Zamalek &amp; Maadi. Delivery &amp; catering available.">
+    <meta name="twitter:image" content="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Playfair Display for elegant luxury and Plus Jakarta Sans for crisp modern legibility -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+        :root {
+            /* Premium Dark Theme Palette */
+            --bg-base: #070709;
+            --bg-surface: #121215;
+            --bg-surface-elevated: #1a1a1e;
+            
+            --primary: #FF8A00;
+            --primary-glow: rgba(255, 138, 0, 0.4);
+            --primary-hover: #FF9E2C;
+            
+            --text-main: #FDFBF7;
+            --text-muted: #A0A0AB;
+            --text-dark: #070709;
+            
+            --border-light: rgba(255, 255, 255, 0.08);
+            --glass-bg: rgba(18, 18, 21, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --radius-pill: 100px;
+            
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-main);
+            background-color: var(--bg-base);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Prevents horizontal scrolling on mobile safely */
+        .page-wrapper {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Ambient Background Glows */
+        .ambient-light {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .light-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(255,138,0,0.15) 0%, rgba(0,0,0,0) 70%); }
+        .light-2 { top: 40%; right: -20%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(255,138,0,0.1) 0%, rgba(0,0,0,0) 70%); }
+        .light-3 { bottom: -10%; left: 20%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(255,138,0,0.12) 0%, rgba(0,0,0,0) 70%); }
+
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 600; line-height: 1.1; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Modern Glassmorphic Nav */
+        nav {
+            position: fixed;
+            top: 1.5rem; left: 50%; transform: translateX(-50%);
+            width: calc(100% - 3rem); max-width: 1200px;
+            background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border); border-radius: var(--radius-pill);
+            z-index: 100; box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            height: 5rem; padding: 0 1rem 0 2rem;
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 1rem; z-index: 101; }
+        .logo-container img {
+            height: 48px; width: 48px; object-fit: cover; border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255,138,0,0.3); border: 2px solid rgba(255,255,255,0.1);
+            transition: transform 0.4s var(--ease-out-expo);
+        }
+        .logo-container:hover img { transform: rotate(10deg) scale(1.05); }
+        .logo-text { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text-main); }
+
+        .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+        .nav-links a.link {
+            font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px;
+            color: var(--text-muted); position: relative; transition: color 0.3s ease;
+        }
+        .nav-links a.link::after {
+            content: ''; position: absolute; width: 0; height: 2px; bottom: -6px; left: 50%;
+            background: var(--primary); transition: all 0.3s var(--ease-out-expo); transform: translateX(-50%);
+        }
+        .nav-links a.link:hover { color: var(--text-main); }
+        .nav-links a.link:hover::after { width: 100%; }
+
+        /* Mobile Hamburger Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-main);
+            border-radius: 2px;
+            transition: all 0.4s var(--ease-out-expo);
+            transform-origin: left center;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            background: rgba(7, 7, 9, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s var(--ease-out-expo);
+        }
+
+        .mobile-nav-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .mobile-nav-overlay a {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--text-main);
+            text-transform: capitalize;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.5s var(--ease-out-expo);
+        }
+
+        .mobile-nav-overlay.active a { transform: translateY(0); opacity: 1; }
+        
+        .mobile-nav-overlay a:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-nav-overlay a:nth-child(2) { transition-delay: 0.15s; }
+        .mobile-nav-overlay a:nth-child(3) { transition-delay: 0.2s; }
+        .mobile-nav-overlay a:nth-child(4) { transition-delay: 0.25s; }
+        .mobile-nav-overlay a:nth-child(5) { transition-delay: 0.3s; }
+
+        /* Premium Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem;
+            font-weight: 600; font-size: 0.95rem; padding: 1rem 2.25rem; border-radius: var(--radius-pill);
+            transition: all 0.4s var(--ease-out-expo); cursor: pointer; border: none;
+            font-family: var(--font-body); position: relative; overflow: hidden; text-transform: uppercase; letter-spacing: 1px;
+            text-align: center;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #D66D00); color: var(--text-dark);
+            box-shadow: 0 10px 20px rgba(255, 138, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.4);
+        }
+        .btn-primary::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.6s var(--ease-out-expo);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 138, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.5); }
+        .btn-primary:hover::before { left: 100%; }
+
+        .btn-outline { background: transparent; color: var(--text-main); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px); }
+        .btn-outline:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.5); transform: translateY(-3px); }
+
+        /* Hero Section */
+        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 8rem 0 4rem; overflow: hidden; }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+            z-index: -2; transform: scale(1.05); animation: slowZoom 20s infinite alternate linear;
+        }
+        @keyframes slowZoom { 0% { transform: scale(1.05); } 100% { transform: scale(1.15); } }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(7,7,9,1) 10%, rgba(7,7,9,0.7) 50%, rgba(7,7,9,0.3) 100%); z-index: -1;
+        }
+        .hero-content { max-width: 700px; position: relative; z-index: 10; }
+        .hero-subtitle {
+            display: inline-flex; align-items: center; gap: 1rem; text-transform: uppercase;
+            letter-spacing: 4px; color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-bottom: 2rem;
+        }
+        .hero-subtitle::before {
+            content: ''; display: block; width: 40px; height: 2px; background: var(--primary);
+        }
+        .hero h1 { font-size: clamp(3rem, 8vw, 6.5rem); letter-spacing: -2px; margin-bottom: 1.5rem; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .hero h1 span { display: block; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.5); font-style: italic; }
+        .hero p { font-size: clamp(1rem, 4vw, 1.25rem); color: var(--text-muted); margin-bottom: 3rem; max-width: 500px; font-weight: 300; }
+        .hero-actions { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+        /* Core Section Styling */
+        .section { padding: 8rem 0; position: relative; }
+        .section-header { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 5rem; }
+        .section-label { text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: var(--primary); margin-bottom: 1rem; font-weight: 600; }
+        .section-header h2 { font-size: clamp(2.2rem, 6vw, 4rem); margin-bottom: 1.5rem; letter-spacing: -1px; }
+        .section-header p { color: var(--text-muted); font-size: clamp(1rem, 4vw, 1.125rem); max-width: 650px; }
+
+        /* Centered Signature Dish Setup */
+        .signature-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .signature-wrapper h3 {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            color: var(--primary);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Luxurious Glowing HR */
+        .lux-glow-hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), rgba(255, 215, 0, 0.8), var(--primary), transparent);
+            box-shadow: 0 0 15px rgba(255, 138, 0, 0.8), 0 0 30px rgba(255, 138, 0, 0.5), 0 0 5px rgba(255, 255, 255, 0.5);
+            margin: 2rem auto;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signature-wrapper p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            font-size: 1.05rem;
+            font-weight: 500;
+            padding: 1.25rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius-md);
+            transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+            text-align: left;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,138,0,0.3);
+        }
+
+        .feature-item svg {
+            color: var(--primary);
+            flex-shrink: 0;
+            filter: drop-shadow(0 0 5px rgba(255,138,0,0.5));
+        }
+
+        /* High-End Menu Display */
+        .menu-section { background: var(--bg-surface); position: relative; }
+        .menu-section::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1400px; margin: 0 auto; }
+        .menu-page {
+            border-radius: var(--radius-md); overflow: hidden; background: #000; border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5); transition: all 0.5s var(--ease-out-expo); position: relative;
+            cursor: zoom-in;
+        }
+        .menu-page::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 100px rgba(0,0,0,0.5); pointer-events: none; }
+        .menu-page:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.7), 0 0 30px rgba(255,138,0,0.2); border-color: rgba(255,138,0,0.4); z-index: 10; }
+        .menu-page img { width: 100%; display: block; transition: transform 0.8s var(--ease-out-expo); }
+        .menu-page:hover img { transform: scale(1.05); }
+
+        /* Lightbox (Image Modal) */
+        .lightbox-modal {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.95); backdrop-filter: blur(10px);
+            z-index: 9999; display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .lightbox-modal.active { opacity: 1; pointer-events: auto; }
+        
+        .lightbox-content {
+            position: relative; max-width: 90vw; max-height: 90vh;
+            transform: scale(0.9); transition: transform 0.4s var(--ease-spring);
+        }
+        .lightbox-modal.active .lightbox-content { transform: scale(1); }
+        
+        .lightbox-content img {
+            max-width: 100%; max-height: 90vh; border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8); object-fit: contain;
+            cursor: zoom-in;
+            user-select: none;
+            -webkit-user-drag: none;
+            touch-action: none;
+            will-change: transform;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: -40px; 
+            right: 0px; 
+            width: 40px; 
+            height: 40px; 
+            background: transparent;
+            border: none;
+            color: var(--primary);
+            display: flex; align-items: center; justify-content: center; 
+            cursor: pointer; z-index: 10000;
+            transition: all 0.4s var(--ease-out-expo);
+            filter: drop-shadow(0 0 8px rgba(255,138,0,0.8));
+        }
+        .close-lightbox:hover {
+            color: #fff;
+            transform: rotate(90deg) scale(1.2);
+            filter: drop-shadow(0 0 12px rgba(255,255,255,0.8));
+        }
+        .close-lightbox svg { width: 28px; height: 28px; stroke-width: 2.5; }
+
+        /* Immersive Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 300px; gap: 1.5rem; }
+        .gallery-item { position: relative; border-radius: var(--radius-md); overflow: hidden; background: var(--bg-surface-elevated); }
+        .gallery-item:nth-child(1) { grid-column: span 8; grid-row: span 2; }
+        .gallery-item:nth-child(2) { grid-column: span 4; grid-row: span 1; }
+        .gallery-item:nth-child(3) { grid-column: span 4; grid-row: span 1; }
+        .gallery-item:nth-child(4) { grid-column: span 12; grid-row: span 1; }
+        
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.8s var(--ease-out-expo);
+        }
+        
+        .gallery-item::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); opacity: 0; transition: opacity 0.4s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-item:hover::after { opacity: 1; }
+
+        /* Glassmorphic Testimonials */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial-card {
+            background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--glass-border);
+            padding: 3rem 2.5rem; border-radius: var(--radius-lg); position: relative; transition: all 0.4s var(--ease-out-expo);
+        }
+        .testimonial-card::before { content: '"'; position: absolute; top: 2rem; right: 2rem; font-family: var(--font-heading); font-size: 6rem; line-height: 1; color: rgba(255,255,255,0.03); }
+        .testimonial-card:hover { transform: translateY(-10px); background: rgba(25, 25, 30, 0.8); border-color: rgba(255, 138, 0, 0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .testimonial-stars { color: var(--primary); font-size: 1.1rem; margin-bottom: 1.5rem; letter-spacing: 4px; filter: drop-shadow(0 0 5px rgba(255,138,0,0.4)); }
+        .testimonial-quote { font-size: 1.125rem; color: var(--text-main); margin-bottom: 2.5rem; line-height: 1.8; font-weight: 300; }
+        .testimonial-author { display: flex; align-items: center; gap: 1.25rem; }
+        .author-avatar {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--bg-surface-elevated), #2a2a32);
+            border: 1px solid rgba(255,255,255,0.1); color: var(--primary);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-family: var(--font-heading); font-size: 1.5rem;
+        }
+        .author-info h4 { font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--text-main); }
+        .author-info p { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.25rem; }
+
+        /* Updated Contact Section & Grids */
+        .contact-section { padding: 8rem 0; position: relative; background: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover scroll; }
+        .contact-overlay { position: absolute; inset: 0; background: rgba(7, 7, 9, 0.88); backdrop-filter: blur(5px); }
+        .contact-card {
+            position: relative; background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+            border: 1px solid rgba(255,255,255,0.05); border-radius: 32px; padding: 5rem 3rem; max-width: 1100px;
+            margin: 0 auto; text-align: center; box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        }
+        .contact-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--primary), transparent); }
+        
+        .contact-locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        .location-box {
+            background: linear-gradient(145deg, rgba(255,255,255,0.02), transparent);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 1.5rem;
+            transition: all 0.4s var(--ease-out-expo);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .location-box:hover {
+            transform: translateY(-8px);
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), transparent);
+            border-color: rgba(255,138,0,0.3);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+        
+        .location-icon {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            background: rgba(255,138,0,0.1);
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(255,138,0,0.2);
+        }
+
+        .location-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+        }
+        
+        .location-address {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .location-phone {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        /* Footer Additions */
+        footer { background: #000; padding: 4rem 0 3rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-tagline {
+            font-family: var(--font-heading);
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Social Links Container */
+        .social-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Facebook Button Glow Effect */
+        footer a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-pill);
+            transition: all 0.4s var(--ease-out-expo);
+        }
+        
+        footer a:hover {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(255, 138, 0, 0.6);
+            box-shadow: 0 0 20px rgba(255, 138, 0, 0.6), 0 0 40px rgba(255, 138, 0, 0.3), inset 0 0 15px rgba(255, 138, 0, 0.15);
+            transform: scale(1.05);
+        }
+        
+        footer a:active {
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(255, 138, 0, 0.8);
+            box-shadow: 0 0 30px rgba(255, 138, 0, 0.8), 0 0 50px rgba(255, 138, 0, 0.5), inset 0 0 20px rgba(255, 138, 0, 0.25);
+            transform: scale(0.98);
+        }
+        
+        footer a svg {
+            transition: all 0.4s var(--ease-out-expo);
+            filter: drop-shadow(0 0 5px rgba(255, 138, 0, 0));
+        }
+        
+        footer a:hover svg {
+            filter: drop-shadow(0 0 10px rgba(255, 138, 0, 0.8));
+        }
+        
+        footer a:active svg {
+            filter: drop-shadow(0 0 15px rgba(255, 138, 0, 1));
+        }
+        
+    
+        /* Animations triggered via JS */
+        .reveal-up { opacity: 0; transform: translateY(40px); transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+
+        /* Responsive Mobile Optimizations */
+        @media (max-width: 992px) {
+            .menu-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+            .gallery-item { grid-column: span 1; grid-row: span 1; }
+            .hero-bg { animation: none; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1.25rem; }
+            
+            /* Navbar Mobile */
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: flex; }
+            nav { width: calc(100% - 2rem); top: 1rem; border-radius: 16px; }
+            .nav-container { padding: 0 1.25rem; height: 4.5rem; }
+            .logo-text { font-size: 1.25rem; }
+            
+            /* Typography & Spacing */
+            .section { padding: 5rem 0; }
+            .hero { padding-top: 8rem; text-align: center; }
+            .hero-subtitle { justify-content: center; font-size: 0.75rem; }
+            .hero-subtitle::before { display: none; }
+            .hero-actions { justify-content: center; flex-direction: column; width: 100%; gap: 1rem; }
+            .hero-actions .btn { width: 100%; }
+            
+            .contact-card { padding: 3rem 1.5rem; border-radius: 20px; }
+            .contact-locations-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            
+            /* Lightbox X icon positioning on mobile */
+            .close-lightbox { 
+                top: 1rem; right: 1rem; position: fixed; 
+                background: transparent; filter: drop-shadow(0 0 10px rgba(0,0,0,0.9)); 
+            }
+        }
+
+        /* Hamburger Animation */
+        body.menu-open .mobile-menu-btn span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        body.menu-open .mobile-menu-btn span:nth-child(2) { opacity: 0; }
+        body.menu-open .mobile-menu-btn span:nth-child(3) { transform: rotate(-45deg) translate(7px, -8px); }
+
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Ambient Lights -->
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
+    <div class="ambient-light light-3"></div>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-nav-overlay" id="mobileMenu">
+        <a href="#about" class="mobile-link">Experience</a>
+        <a href="#menu" class="mobile-link">Menu</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#testimonials" class="mobile-link">Reviews</a>
+        <a href="#contact" class="mobile-link" style="color: var(--primary);">Reserve / Order</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <img src="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=gbOtNoFe_7oQ7kNvwEA8n1k&_nc_oc=AdpgKRENuwNGffJcDhIjGOLJ2Kvb_4GQrmHyRiTb6LEXVsMpWjnwaoMn0wttIU3hOZs&_nc_zt=23&_nc_ht=scontent-hbe1-2.xx&_nc_gid=qGstK-Kmx5Jo2SmXm4E6IQ&_nc_ss=7a3a8&oh=00_Af2S9uVqzfgu8Ry8h7HhIhaZEOHSnDwZaRUyBOMHGpedpg&oe=69E9E22C" alt="Cairo Kitchen restaurant logo">
+                <span class="logo-text">Cairo Kitchen</span>
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="nav-links">
+                <a href="#about" class="link">Experience</a>
+                <a href="#menu" class="link">Menu</a>
+                <a href="#gallery" class="link">Gallery</a>
+                <a href="#testimonials" class="link">Reviews</a>
+                <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">
+                    Reserve
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content reveal-up">
+                <span class="hero-subtitle">Healthy, homemade goodness.</span>
+                <h1>Egypt’s Culture <span>On a Plate.</span></h1>
+                <p>We are passionate about redefining Egyptian dining. Experience the warm, authentic flavors of home presented in an immersive, contemporary setting.</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn btn-primary">Discover the Menu</a>
+                    <a href="#contact" class="btn btn-outline">We Deliver To You</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Signature Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="signature-wrapper reveal-up">
+                <span class="section-label">Our Masterpiece</span>
+                <h3>The Signature Koshary</h3>
+                
+                <hr class="lux-glow-hr">
+                
+                <p>Experience Egypt's iconic national dish, elevated. A masterful blend of premium rice, lentils, macaroni, and chickpeas, crowned with perfectly crisped onions and accompanied by our artisanal spiced tomato and Dokka sauces.</p>
+                
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        Sourced with uncompromising quality
+                    </li>
+                    <li class="feature-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        Authentic heritage recipes
+                    </li>
+                    <li class="feature-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Refined dining atmosphere
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Menu -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Culinary Journey</span>
+                <h2>The Menu</h2>
+                <p>Explore our curated selection of traditional Egyptian tajens, rotisserie chicken, mixed mahashi, vibrant salads, and authentic appetizers like mombar and sambousak.</p>
+                <p style="color: var(--primary); font-size: 0.9rem; margin-top: 0.5rem;">Tap images to read &amp; interact</p>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-page reveal-up menu-trigger" data-img="https://scontent-hbe1-1.xx.fbcdn.net/v/t39.30808-6/640254333_1327986799353992_5643509856535739528_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=wbhjdkpQ2ZYQ7kNvwHW47gh&_nc_oc=Adrz8DCqbdcU65Eds-i0fG6ByIVKD7TNqH2KooFi1R2rvFW11JTsT4CrIKD-fV-tI-c&_nc_zt=23&_nc_ht=scontent-hbe1-1.xx&_nc_gid=tERJp3F1HCUmbSFMhycW6w&_nc_ss=7a3a8&oh=00_Af1VazHMCX_nsEgItWH7XcgxOp_zxUB10a-x4_BmfOfL6A&oe=69E9C41E">
+                    <img src="./pics/menu1.jpg" alt="Cairo Kitchen food menu — Egyptian dishes, prices and full offerings">
+                </div>
+                <div class="menu-page reveal-up menu-trigger" style="transition-delay: 0.2s;" data-img="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/641079982_1327986662687339_3883307080304133583_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=HolVjwg8SRIQ7kNvwHUfbBJ&_nc_oc=AdquG--bQ6PjeeUa5MtBzmYglcV--Qc6b3al2CZ5wczopyDTfU3Ml0y_rlQEXMTnQi4&_nc_zt=23&_nc_ht=scontent-hbe1-2.xx&_nc_gid=6nNcA4uF-ZccXSzlBTxNuw&_nc_ss=7a3a8&oh=00_Af3duQo1N8JSDYRS54wCMwDx3IU99y1Ip0EcoTTbmjcPIw&oe=69E9E31F">
+                    <img src="./pics/menu2.jpg" alt="Cairo Kitchen drinks and desserts menu — full selection with prices">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Gallery -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Aesthetic</span>
+                <h2>Visual Taste</h2>
+                <p>A glimpse into the elegance, texture, and vibrance that define the Cairo Kitchen dining experience.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item reveal-up">
+                    <img src="./pics/beef.jpg" alt="Authentic Egyptian beef at Cairo Kitchen restaurant">
+                </div>
+                <div class="gallery-item reveal-up" style="transition-delay: 0.1s;">
+                    <img src="./pics/Authentic Egyptian koshary dish at Cairo Kitchen restaurant.jpg" alt="Traditional Egyptian food spread — mahashi, salads and appetizers">
+                </div>
+                <div class="gallery-item reveal-up" style="transition-delay: 0.2s;">
+                    <img src="./pics/fattah_chicken.jpg" alt="Freshly prepared homemade Egyptian food at Cairo Kitchen Cairo">
+                </div>
+                <div class="gallery-item reveal-up" style="transition-delay: 0.3s;">
+                    <img src="./pics/home_made_kosharay.jpg" alt="Homemade Egyptian koshary dish at Cairo Kitchen restaurant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Acclaim</span>
+                <h2>Guest Experiences</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-up">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">"Absolutely the best Koshary I've had outside of my grandmother's house! The Dokka sauce is perfectly spiced and the atmosphere is wonderfully modern yet authentic."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Ahmed T.</h4>
+                            <p>Local Connoisseur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">"A beautifully designed restaurant with fantastic Egyptian cuisine. Their stuffed vine leaves are incredibly fresh and flavorful. Highly recommended for sophisticated family dinners."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>Dine-in Guest</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">"We ordered premium catering for a large gathering and everything was flawless. The tajens arrived hot, portions were generous, and the presentation was immaculate."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">K</div>
+                        <div class="author-info">
+                            <h4>Karim R.</h4>
+                            <p>Event Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Delivery CTA -->
+    <section class="contact-section" id="contact">
+        <div class="contact-overlay"></div>
+        <div class="container" style="position: relative; z-index: 10;">
+            <div class="contact-card reveal-up">
+                <span class="section-label">At Your Doorstep</span>
+                <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem;">We Deliver!</h2>
+                <p style="color: var(--text-muted); font-size: clamp(1rem, 4vw, 1.15rem); max-width: 600px; margin: 0 auto;">Bringing homemade goodness straight to you. Secure a table, place a delivery order, or let us cater your upcoming special events.</p>
+                
+                <div class="contact-locations-grid">
+                    
+                    <!-- Zamalek Branch -->
+                    <div class="location-box">
+                        <div class="location-icon">
+                            <!-- Delivery Map Pin -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <h3 class="location-title">Zamalek</h3>
+                        <p class="location-address">118 26th of July St.<br><span style="font-size: 0.85em; opacity: 0.7;">(Entrance on Aziz Osman St.)</span></p>
+                        <p class="location-phone">02-27354000<br>02-27359000</p>
+                        <a href="tel:0227354000" class="btn btn-outline" style="width: 100%; padding: 0.85rem;">Call Zamalek</a>
+                    </div>
+
+                    <!-- Maadi Branch -->
+                    <div class="location-box" style="transition-delay: 0.1s;">
+                        <div class="location-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <h3 class="location-title">Maadi</h3>
+                        <p class="location-address">19 Street 231<br><span style="font-size: 0.85em; opacity: 0.7;">Degla</span></p>
+                        <p class="location-phone">02-27546547<br>+2012 019 55 777</p>
+                        <a href="tel:+201201955777" class="btn btn-outline" style="width: 100%; padding: 0.85rem;">Call Maadi</a>
+                    </div>
+
+                    <!-- Catering Service -->
+                    <div class="location-box" style="transition-delay: 0.2s;">
+                        <div class="location-icon">
+                            <!-- Party / Serving Dish icon -->
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20"></path><path d="M12 2v4"></path><path d="M8 2.5v3"></path><path d="M16 2.5v3"></path><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path><path d="M22 14c0-3.3-2.7-6-6-6H8c-3.3 0-6 2.7-6 6"></path></svg>
+                        </div>
+                        <h3 class="location-title">Catering</h3>
+                        <p class="location-address">Authentic Egyptian look & healthy, tasty food for your events.<br><a href="mailto:catering@cairo-kitchen.com" style="color: var(--primary); text-decoration: underline; font-size: 0.9em; margin-top: 0.5rem; display: block;">catering@cairo-kitchen.com</a></p>
+                        <p class="location-phone" style="margin-bottom: 0.5rem;">+2012 012 4444 5</p>
+                        <a href="tel:+201201244445" class="btn btn-primary" style="width: 100%; padding: 0.85rem; margin-top: auto;">Book Catering</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=gbOtNoFe_7oQ7kNvwEA8n1k&_nc_oc=AdpgKRENuwNGffJcDhIjGOLJ2Kvb_4GQrmHyRiTb6LEXVsMpWjnwaoMn0wttIU3hOZs&_nc_zt=23&_nc_ht=scontent-hbe1-2.xx&_nc_gid=qGstK-Kmx5Jo2SmXm4E6IQ&_nc_ss=7a3a8&oh=00_Af2S9uVqzfgu8Ry8h7HhIhaZEOHSnDwZaRUyBOMHGpedpg&oe=69E9E22C" alt="Cairo Kitchen restaurant logo" style="width: 48px; height: 48px; border-radius: 50%; margin: 0 auto 1.5rem; opacity: 0.7; filter: grayscale(100%); transition: all 0.3s ease;">
+            
+            <p class="footer-tagline">healthy, homemade goodness {that's a promise}</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/CairoKitchen/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    Facebook
+                </a>
+                
+                <a href="https://www.google.com/maps/place/Cairo+kitchen+maadi/@29.9597568,31.2769057,17z/data=!4m6!3m5!1s0x145839c6c5d09515:0xe22c18e62ca994a8!8m2!3d29.9597636!4d31.2770765!16s%2Fg%2F11smhp997v?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Google Maps - Maadi">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Maadi
+                </a>
+                
+                <a href="https://www.google.com/maps/place/Cairo+Kitchen+zamalek/@30.0600247,31.2184923,17z/data=!3m1!4b1!4m6!3m5!1s0x145840e0dd5ccfc3:0x3eace192dc331b28!8m2!3d30.0600201!4d31.2210672!16s%2Fg%2F11_sdjfyv?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Google Maps - Zamalek">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Zamalek
+                </a>
+            </div>
+
+            <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem; letter-spacing: 1px;">&copy; 2026 CAIRO KITCHEN. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+</div> <!-- End Page Wrapper -->
+
+<!-- Lightbox Modal for Menu -->
+<div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+        <button class="close-lightbox" id="closeLightbox" aria-label="Close menu image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <img id="lightboxImg" src="" alt="Menu Image">
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        
+        // 1. Scroll Reveal Animation
+        const reveals = document.querySelectorAll('.reveal-up');
+        const revealOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealOnScroll.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        reveals.forEach(el => revealOnScroll.observe(el));
+
+        // 2. Mobile Nav Toggle
+        const menuBtn = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        const toggleMobileMenu = () => {
+            const isOpen = document.body.classList.contains('menu-open');
+            if (isOpen) {
+                document.body.classList.remove('menu-open', 'no-scroll');
+                mobileMenu.classList.remove('active');
+            } else {
+                document.body.classList.add('menu-open', 'no-scroll');
+                mobileMenu.classList.add('active');
+            }
+        };
+
+        menuBtn.addEventListener('click', toggleMobileMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if(document.body.classList.contains('menu-open')) toggleMobileMenu();
+            });
+        });
+
+        // 3. Premium Interactive Lightbox (Pan, Mouse-Wheel Zoom, Pinch-to-Zoom, Click-to-Zoom)
+        const triggers = document.querySelectorAll('.menu-trigger');
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeLightbox');
+
+        // Zoom & Pan state trackers
+        let scale = 1;
+        let panning = false;
+        let isDragging = false;
+        let pointX = 0, pointY = 0;
+        let startX = 0, startY = 0;
+        let mouseDownX = 0, mouseDownY = 0;
+        let pinchStartDist = 0;
+        let pinchStartScale = 1;
+        let pinchCenter = { x: 0, y: 0 };
+
+        const setTransform = () => {
+            modalImg.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+        };
+
+        const setTransition = (active) => {
+            modalImg.style.transition = active ? "transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)" : "none";
+        };
+
+        const resetZoom = () => {
+            scale = 1;
+            pointX = 0;
+            pointY = 0;
+            setTransition(true);
+            setTransform();
+            modalImg.style.cursor = 'zoom-in';
+            setTimeout(() => setTransition(false), 300);
+        };
+
+        const zoomAtPoint = (clientX, clientY, targetScale) => {
+            const rect = modalImg.getBoundingClientRect();
+            // Calculate distance from center of the current image position
+            const dx = clientX - (rect.left + rect.width / 2);
+            const dy = clientY - (rect.top + rect.height / 2);
+            
+            // Adjust translation to keep the zoomed point stationary beneath the cursor
+            pointX -= (dx / scale) * (targetScale - scale);
+            pointY -= (dy / scale) * (targetScale - scale);
+            scale = targetScale;
+            
+            if (scale === 1) {
+                pointX = 0;
+                pointY = 0;
+            }
+            setTransform();
+        };
+
+        const openModal = (src) => {
+            modalImg.src = src;
+            modal.classList.add('active');
+            document.body.classList.add('no-scroll');
+            resetZoom();
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+            resetZoom(); // Animate back to original size during fadeout
+            setTimeout(() => { modalImg.src = ''; }, 300); 
+        };
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                openModal(trigger.getAttribute('data-img'));
+            });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        
+        modal.addEventListener('click', (e) => {
+            // Close if clicking outside the image container
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        });
+
+        // DESKTOP: Click and Drag to Pan
+        modalImg.addEventListener('mousedown', (e) => {
+            e.preventDefault(); 
+            mouseDownX = e.clientX;
+            mouseDownY = e.clientY;
+            isDragging = false;
+            
+            if (scale > 1) {
+                panning = true;
+                startX = e.clientX - pointX;
+                startY = e.clientY - pointY;
+                modalImg.style.cursor = 'grabbing';
+            }
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!panning) return;
+            
+            // If mouse moved enough, consider it a drag (prevents accidental clicks)
+            if (Math.abs(e.clientX - mouseDownX) > 5 || Math.abs(e.clientY - mouseDownY) > 5) {
+                isDragging = true;
+            }
+            
+            pointX = e.clientX - startX;
+            pointY = e.clientY - startY;
+            setTransform();
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (panning) {
+                panning = false;
+                modalImg.style.cursor = scale > 1 ? 'grab' : 'zoom-in';
+            }
+        });
+
+        // DESKTOP: Mouse Wheel to Zoom
+        modalImg.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            setTransition(false); // Remove transition for smooth instantaneous wheel zoom
+            
+            const delta = -e.deltaY;
+            const zoomFactor = 1.15;
+            let newScale = delta > 0 ? scale * zoomFactor : scale / zoomFactor;
+            
+            // Constrain Zoom Multiplier
+            newScale = Math.max(1, Math.min(newScale, 5));
+            
+            if (newScale !== scale) {
+                zoomAtPoint(e.clientX, e.clientY, newScale);
+                modalImg.style.cursor = scale > 1 ? 'grab' : 'zoom-in';
+            }
+        }, { passive: false });
+
+        // DESKTOP/MOBILE: Click/Tap to quick-zoom
+        modalImg.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isDragging) {
+                isDragging = false;
+                return;
+            }
+            
+            setTransition(true);
+            if (scale > 1) {
+                resetZoom();
+            } else {
+                zoomAtPoint(e.clientX, e.clientY, 2.5);
+                modalImg.style.cursor = 'grab';
+            }
+            setTimeout(() => setTransition(false), 300);
+        });
+
+        // MOBILE: Pinch-to-Zoom & Touch Pan Setup
+        modalImg.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 2) {
+                panning = false;
+                pinchStartDist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                pinchStartScale = scale;
+                pinchCenter = {
+                    x: (e.touches[0].clientX + e.touches[1].clientX) / 2,
+                    y: (e.touches[0].clientY + e.touches[1].clientY) / 2
+                };
+            } else if (e.touches.length === 1) {
+                mouseDownX = e.touches[0].clientX;
+                mouseDownY = e.touches[0].clientY;
+                isDragging = false;
+                
+                if (scale > 1) {
+                    panning = true;
+                    startX = e.touches[0].clientX - pointX;
+                    startY = e.touches[0].clientY - pointY;
+                }
+            }
+        });
+
+        // MOBILE: Pinching & Panning logic
+        modalImg.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault(); // Prevents page from doing native pull-to-refresh
+                setTransition(false);
+                
+                const dist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                let newScale = pinchStartScale * (dist / pinchStartDist);
+                newScale = Math.max(1, Math.min(newScale, 5));
+                
+                const currentCenter = {
+                    x: (e.touches[0].clientX + e.touches[1].clientX) / 2,
+                    y: (e.touches[0].clientY + e.touches[1].clientY) / 2
+                };
+                
+                // Allow two finger drag to pan while pinching
+                const panX = currentCenter.x - pinchCenter.x;
+                const panY = currentCenter.y - pinchCenter.y;
+                pointX += panX;
+                pointY += panY;
+                pinchCenter = currentCenter;
+                
+                zoomAtPoint(currentCenter.x, currentCenter.y, newScale);
+                
+            } else if (e.touches.length === 1 && panning) {
+                e.preventDefault();
+                
+                // Lock out accidental click behavior if dragged
+                if (Math.abs(e.touches[0].clientX - mouseDownX) > 5 || Math.abs(e.touches[0].clientY - mouseDownY) > 5) {
+                    isDragging = true;
+                }
+                
+                pointX = e.touches[0].clientX - startX;
+                pointY = e.touches[0].clientY - startY;
+                setTransform();
+            }
+        }, { passive: false });
+
+        modalImg.addEventListener('touchend', () => {
+            panning = false;
+        });
+
+    });
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Cairo Kitchen",
+  "description": "Authentic Egyptian dining featuring koshary, tajens, rotisserie chicken, mahashi, and catering services in Cairo.",
+  "servesCuisine": "Egyptian",
+  "url": "https://cairo-kitchen.com",
+  "logo": "https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg",
+  "sameAs": [
+    "https://www.facebook.com/CairoKitchen/"
+  ],
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Cairo Kitchen Zamalek",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "118 26th of July St., Entrance on Aziz Osman St.",
+        "addressLocality": "Zamalek",
+        "addressRegion": "Cairo",
+        "addressCountry": "EG"
+      },
+      "telephone": "+20227354000"
+    },
+    {
+      "@type": "Place",
+      "name": "Cairo Kitchen Maadi",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "19 Street 231, Degla",
+        "addressLocality": "Maadi",
+        "addressRegion": "Cairo",
+        "addressCountry": "EG"
+      },
+      "telephone": "+20227546547"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Cairo Kitchen Menu",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Koshary" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Tajen" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Rotisserie Chicken" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Mahashi" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Mombar" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Sambousak" } }
+    ]
+  }
+}
+</script>
+
+</body>
+</html>
