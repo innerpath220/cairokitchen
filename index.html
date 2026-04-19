@@ -7,6 +7,7 @@
     <meta name="description" content="Cairo Kitchen — authentic Egyptian dining in Zamalek &amp; Maadi, Cairo. Koshary, tajens, rotisserie chicken &amp; catering. Order delivery or reserve a table.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://cairo-kitchen.com/">
+    <link rel="icon" type="image/jpeg" href="./pics/logo.jpg">
 
     <!-- Open Graph -->
     <meta property="og:type" content="restaurant">
@@ -235,8 +236,25 @@
         .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 8rem 0 4rem; overflow: hidden; }
         .hero-bg {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+            background: url('./pics/home_made_kosharay.jpg') center/cover no-repeat;
             z-index: -2; transform: scale(1.05); animation: slowZoom 20s infinite alternate linear;
+        }
+        
+        /* Carousel hero backgrounds */
+        .hero-carousel {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -2; overflow: hidden;
+        }
+
+        .hero-carousel-slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            opacity: 0; transition: opacity 0.8s var(--ease-out-expo);
+        }
+
+        .hero-carousel-slide.active {
+            opacity: 1;
+            animation: slowZoom 20s infinite alternate linear;
         }
         @keyframes slowZoom { 0% { transform: scale(1.05); } 100% { transform: scale(1.15); } }
         .hero-overlay {
@@ -435,7 +453,7 @@
         .author-info p { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.25rem; }
 
         /* Updated Contact Section & Grids */
-        .contact-section { padding: 8rem 0; position: relative; background: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover scroll; }
+        .contact-section { padding: 8rem 0; position: relative; background: url('./pics/beef.jpg') center/cover scroll; }
         .contact-overlay { position: absolute; inset: 0; background: rgba(7, 7, 9, 0.88); backdrop-filter: blur(5px); }
         .contact-card {
             position: relative; background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
@@ -576,6 +594,7 @@
             .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
             .gallery-item { grid-column: span 1; grid-row: span 1; }
             .hero-bg { animation: none; }
+            .hero-carousel-slide { animation: none !important; }
         }
 
         @media (max-width: 768px) {
@@ -598,6 +617,9 @@
             
             .contact-card { padding: 3rem 1.5rem; border-radius: 20px; }
             .contact-locations-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            
+            /* Carousel on mobile */
+            .carousel-nav { bottom: 1rem; }
             
             /* Lightbox X icon positioning on mobile */
             .close-lightbox { 
@@ -635,7 +657,7 @@
     <nav>
         <div class="nav-container">
             <a href="#" class="logo-container">
-                <img src="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=gbOtNoFe_7oQ7kNvwEA8n1k&_nc_oc=AdpgKRENuwNGffJcDhIjGOLJ2Kvb_4GQrmHyRiTb6LEXVsMpWjnwaoMn0wttIU3hOZs&_nc_zt=23&_nc_ht=scontent-hbe1-2.xx&_nc_gid=qGstK-Kmx5Jo2SmXm4E6IQ&_nc_ss=7a3a8&oh=00_Af2S9uVqzfgu8Ry8h7HhIhaZEOHSnDwZaRUyBOMHGpedpg&oe=69E9E22C" alt="Cairo Kitchen restaurant logo">
+                <img src="./pics/logo.jpg" alt="Cairo Kitchen restaurant logo">
                 <span class="logo-text">Cairo Kitchen</span>
             </a>
             
@@ -661,7 +683,12 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-carousel" id="heroCarousel">
+            <div class="hero-carousel-slide active" style="background-image: url('./pics/home_made_kosharay.jpg');"></div>
+            <div class="hero-carousel-slide" style="background-image: url('./pics/beef.jpg');"></div>
+            <div class="hero-carousel-slide" style="background-image: url('./pics/Authentic Egyptian koshary dish at Cairo Kitchen restaurant.jpg');"></div>
+            <div class="hero-carousel-slide" style="background-image: url('./pics/fattah_chicken.jpg');"></div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content reveal-up">
@@ -716,10 +743,10 @@
             </div>
             
             <div class="menu-grid">
-                <div class="menu-page reveal-up menu-trigger" data-img="https://scontent-hbe1-1.xx.fbcdn.net/v/t39.30808-6/640254333_1327986799353992_5643509856535739528_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=wbhjdkpQ2ZYQ7kNvwHW47gh&_nc_oc=Adrz8DCqbdcU65Eds-i0fG6ByIVKD7TNqH2KooFi1R2rvFW11JTsT4CrIKD-fV-tI-c&_nc_zt=23&_nc_ht=scontent-hbe1-1.xx&_nc_gid=tERJp3F1HCUmbSFMhycW6w&_nc_ss=7a3a8&oh=00_Af1VazHMCX_nsEgItWH7XcgxOp_zxUB10a-x4_BmfOfL6A&oe=69E9C41E">
+                <div class="menu-page reveal-up menu-trigger" data-img="./pics/menu1.jpg">
                     <img src="./pics/menu1.jpg" alt="Cairo Kitchen food menu — Egyptian dishes, prices and full offerings">
                 </div>
-                <div class="menu-page reveal-up menu-trigger" style="transition-delay: 0.2s;" data-img="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/641079982_1327986662687339_3883307080304133583_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=HolVjwg8SRIQ7kNvwHUfbBJ&_nc_oc=AdquG--bQ6PjeeUa5MtBzmYglcV--Qc6b3al2CZ5wczopyDTfU3Ml0y_rlQEXMTnQi4&_nc_zt=23&_nc_ht=scontent-hbe1-2.xx&_nc_gid=6nNcA4uF-ZccXSzlBTxNuw&_nc_ss=7a3a8&oh=00_Af3duQo1N8JSDYRS54wCMwDx3IU99y1Ip0EcoTTbmjcPIw&oe=69E9E31F">
+                <div class="menu-page reveal-up menu-trigger" style="transition-delay: 0.2s;" data-img="./pics/menu2.jpg">
                     <img src="./pics/menu2.jpg" alt="Cairo Kitchen drinks and desserts menu — full selection with prices">
                 </div>
             </div>
@@ -819,7 +846,7 @@
                         </div>
                         <h3 class="location-title">Zamalek</h3>
                         <p class="location-address">118 26th of July St.<br><span style="font-size: 0.85em; opacity: 0.7;">(Entrance on Aziz Osman St.)</span></p>
-                        <p class="location-phone">02-27354000<br>02-27359000</p>
+                        <p class="location-phone">02-27354000<br>01201244445</p>
                         <a href="tel:0227354000" class="btn btn-outline" style="width: 100%; padding: 0.85rem;">Call Zamalek</a>
                     </div>
 
@@ -830,7 +857,7 @@
                         </div>
                         <h3 class="location-title">Maadi</h3>
                         <p class="location-address">19 Street 231<br><span style="font-size: 0.85em; opacity: 0.7;">Degla</span></p>
-                        <p class="location-phone">02-27546547<br>+2012 019 55 777</p>
+                        <p class="location-phone">02-27546547<br>012 019 55 777</p>
                         <a href="tel:+201201955777" class="btn btn-outline" style="width: 100%; padding: 0.85rem;">Call Maadi</a>
                     </div>
 
@@ -842,7 +869,7 @@
                         </div>
                         <h3 class="location-title">Catering</h3>
                         <p class="location-address">Authentic Egyptian look & healthy, tasty food for your events.<br><a href="mailto:catering@cairo-kitchen.com" style="color: var(--primary); text-decoration: underline; font-size: 0.9em; margin-top: 0.5rem; display: block;">catering@cairo-kitchen.com</a></p>
-                        <p class="location-phone" style="margin-bottom: 0.5rem;">+2012 012 4444 5</p>
+                        <p class="location-phone" style="margin-bottom: 0.5rem;">012 012 4444 5</p>
                         <a href="tel:+201201244445" class="btn btn-primary" style="width: 100%; padding: 0.85rem; margin-top: auto;">Book Catering</a>
                     </div>
 
@@ -854,7 +881,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <img src="https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=gbOtNoFe_7oQ7kNvwEA8n1k&_nc_oc=AdpgKRENuwNGffJcDhIjGOLJ2Kvb_4GQrmHyRiTb6LEXVsMpWjnwaoMn0wttIU3hOZs&_nc_zt=23&_nc_ht=scontent-hbe1-2.xx&_nc_gid=qGstK-Kmx5Jo2SmXm4E6IQ&_nc_ss=7a3a8&oh=00_Af2S9uVqzfgu8Ry8h7HhIhaZEOHSnDwZaRUyBOMHGpedpg&oe=69E9E22C" alt="Cairo Kitchen restaurant logo" style="width: 48px; height: 48px; border-radius: 50%; margin: 0 auto 1.5rem; opacity: 0.7; filter: grayscale(100%); transition: all 0.3s ease;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: url('./pics/logo.jpg') center/cover; margin: 0 auto 1.5rem; opacity: 0.7; filter: grayscale(100%); transition: all 0.3s ease;"></div>
             
             <p class="footer-tagline">healthy, homemade goodness {that's a promise}</p>
             
@@ -933,7 +960,27 @@
             });
         });
 
-        // 3. Premium Interactive Lightbox (Pan, Mouse-Wheel Zoom, Pinch-to-Zoom, Click-to-Zoom)
+        // 3. Hero Section Auto-rotating Background
+        const heroCarousel = document.getElementById('heroCarousel');
+        const heroSlides = heroCarousel ? heroCarousel.querySelectorAll('.hero-carousel-slide') : [];
+        let currentHeroSlide = 0;
+        let heroInterval;
+
+        if (heroSlides.length > 0) {
+            const nextHeroSlide = () => {
+                heroSlides[currentHeroSlide].classList.remove('active');
+                currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+                heroSlides[currentHeroSlide].classList.add('active');
+            };
+
+            const startHeroTimer = () => {
+                heroInterval = setInterval(nextHeroSlide, 6000); // Auto-rotate every 6 seconds
+            };
+
+            startHeroTimer();
+        }
+
+        // 4. Premium Interactive Lightbox (Pan, Mouse-Wheel Zoom, Pinch-to-Zoom, Click-to-Zoom)
         const triggers = document.querySelectorAll('.menu-trigger');
         const modal = document.getElementById('lightboxModal');
         const modalImg = document.getElementById('lightboxImg');
@@ -1171,7 +1218,7 @@
   "description": "Authentic Egyptian dining featuring koshary, tajens, rotisserie chicken, mahashi, and catering services in Cairo.",
   "servesCuisine": "Egyptian",
   "url": "https://cairo-kitchen.com",
-  "logo": "https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326275912_712782320200606_6113433269325314336_n.jpg",
+  "logo": "./pics/logo.jpg",
   "sameAs": [
     "https://www.facebook.com/CairoKitchen/"
   ],
